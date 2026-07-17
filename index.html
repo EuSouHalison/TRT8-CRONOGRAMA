@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Plano de Guerra TRT-8 • FCC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Voltar ao início">
+      <span class="brand-mark">8</span>
+      <span>
+        <strong>OPERAÇÃO TRT-8</strong>
+        <small>Plano de guerra • FCC</small>
+      </span>
+    </a>
+    <nav>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#prioridades">Prioridades</a>
+      <a href="#metas">Metas</a>
+    </nav>
+    <button class="ghost-btn" id="resetBtn">Reiniciar progresso</button>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PREPARAÇÃO INTENSIVA • 8 SEMANAS</p>
+        <h1>Disciplina vence o edital.</h1>
+        <p class="lead">Um cronograma enxuto para dominar o núcleo mais rentável da FCC em concursos de TRT: Trabalho, Processo do Trabalho, Português, Constitucional e Administrativo.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#cronograma">Começar agora</a>
+          <button class="secondary-btn" id="todayBtn">Ir para o dia atual</button>
+        </div>
+        <div class="mission-strip">
+          <div><span>Meta semanal</span><strong>30h líquidas</strong></div>
+          <div><span>Questões</span><strong>350–500</strong></div>
+          <div><span>Simulados</span><strong>1 por semana</strong></div>
+        </div>
+      </div>
+
+      <aside class="command-card">
+        <div class="radar">
+          <div class="radar-ring ring-1"></div>
+          <div class="radar-ring ring-2"></div>
+          <div class="radar-ring ring-3"></div>
+          <div class="radar-sweep"></div>
+          <div class="radar-core">FCC</div>
+        </div>
+        <div class="command-data">
+          <div>
+            <span>Progresso geral</span>
+            <strong id="progressText">0%</strong>
+          </div>
+          <div class="progress-track"><span id="progressBar"></span></div>
+          <p id="progressMessage">Marque as missões concluídas para acompanhar sua evolução.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="principles" id="prioridades">
+      <article>
+        <span class="number">01</span>
+        <h2>Núcleo duro</h2>
+        <p>Trabalho e Processo do Trabalho todos os dias úteis, alternando aprofundamento, lei seca e questões.</p>
+      </article>
+      <article>
+        <span class="number">02</span>
+        <h2>FCC na veia</h2>
+        <p>Questões da própria banca, com preferência por TRTs, TST, TRFs e tribunais de porte semelhante.</p>
+      </article>
+      <article>
+        <span class="number">03</span>
+        <h2>Revisão inteligente</h2>
+        <p>Ciclos de 24 horas, 7 dias e 30 dias, sempre guiados pelo caderno de erros.</p>
+      </article>
+    </section>
+
+    <section class="dashboard" id="metas">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PAINEL DE COMANDO</p>
+          <h2>Metas que realmente movem sua nota</h2>
+        </div>
+        <div class="week-filter" role="group" aria-label="Filtrar fase">
+          <button class="filter active" data-filter="all">Todas</button>
+          <button class="filter" data-filter="blindagem">Blindagem</button>
+          <button class="filter" data-filter="consolidacao">Consolidação</button>
+          <button class="filter" data-filter="ataque">Ataque</button>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card accent">
+          <span>Direito do Trabalho</span>
+          <strong>90%</strong>
+          <small>meta de acertos</small>
+        </article>
+        <article class="stat-card">
+          <span>Processo do Trabalho</span>
+          <strong>85%</strong>
+          <small>meta de acertos</small>
+        </article>
+        <article class="stat-card">
+          <span>Português</span>
+          <strong>80%</strong>
+          <small>meta de acertos</small>
+        </article>
+        <article class="stat-card">
+          <span>Constitucional + Administrativo</span>
+          <strong>78%</strong>
+          <small>meta combinada</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="schedule" id="cronograma">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CRONOGRAMA OPERACIONAL</p>
+          <h2>8 semanas para cercar o edital</h2>
+        </div>
+        <p class="section-note">Clique em cada missão para marcar como concluída. O progresso fica salvo neste navegador.</p>
+      </div>
+
+      <div class="phase phase-blindagem" data-phase="blindagem">
+        <div class="phase-header">
+          <div>
+            <span>FASE 1</span>
+            <h3>Blindagem</h3>
+          </div>
+          <p>Semanas 1 e 2 • construir base e mapear falhas</p>
+        </div>
+        <div class="week-grid" id="weeks1"></div>
+      </div>
+
+      <div class="phase phase-consolidacao" data-phase="consolidacao">
+        <div class="phase-header">
+          <div>
+            <span>FASE 2</span>
+            <h3>Consolidação</h3>
+          </div>
+          <p>Semanas 3 a 5 • lei seca, jurisprudência e ganho de velocidade</p>
+        </div>
+        <div class="week-grid" id="weeks2"></div>
+      </div>
+
+      <div class="phase phase-ataque" data-phase="ataque">
+        <div class="phase-header">
+          <div>
+            <span>FASE 3</span>
+            <h3>Ataque</h3>
+          </div>
+          <p>Semanas 6 a 8 • simulados, correção e revisão de alta incidência</p>
+        </div>
+        <div class="week-grid" id="weeks3"></div>
+      </div>
+    </section>
+
+    <section class="method">
+      <div class="method-copy">
+        <p class="eyebrow">PROTOCOLO DIÁRIO</p>
+        <h2>Como executar cada bloco</h2>
+        <p>Use blocos de 50 minutos com 10 minutos de pausa. Em matérias jurídicas, comece pela lei, avance para a teoria apenas quando necessário e finalize com questões.</p>
+      </div>
+      <div class="method-steps">
+        <div><span>1</span><strong>Lei seca</strong><small>20–30 min</small></div>
+        <div><span>2</span><strong>Teoria objetiva</strong><small>30–40 min</small></div>
+        <div><span>3</span><strong>Questões FCC</strong><small>40–60 min</small></div>
+        <div><span>4</span><strong>Caderno de erros</strong><small>10–15 min</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>OPERAÇÃO TRT-8</strong>
+      <p>Constância, correção de erros e domínio do núcleo duro.</p>
+    </div>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
